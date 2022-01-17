@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-div {
+  width: 100%;
+  background: linear-gradient(to right, rgb(156, 144, 131), #eee);
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  font-family: 'Black And White Picture', sans-serif;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 0;
+  ;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(156, 144, 131), #eee);
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Shadows Into Light', sans-serif;
+}
+
+input {
+  width: 30%;
+  height: 30px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  background: #eee;
+  padding-left: 15px;
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  padding-left: 15px;
+  font-size: 1.3rem;
+}
+
+#addBtn {
+  width: 200px;
+  height: 50px;
+  background-color: teal;
+  color: white;
+  border-radius: 100px;
+  font-size: 1.8rem;
+  font-family: 'Shadows into Light', sans-serif;
+  cursor: pointer;
+  animation: button .5s ease infinite alternate;
+}
+
+@keyframes button {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: linear-gradient(to left, rgba(22, 111, 2, .5), #eee);
+}
+
+.newDiv {
+  width: 300px;
+  max-width: 350px;
+  min-height: 350px;
+  max-height: 750px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.topBottomText {
+  font-family: sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  overflow-wrap: break-word;
+  padding: 15px;
+}
+
+.removeBtn {
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+}
+
+.newDiv:hover .removeBtn {
+  animation: delete 1s ease-in-out forwards;
+}
+
+@keyframes delete {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.imageDiv {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
